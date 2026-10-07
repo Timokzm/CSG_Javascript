@@ -1,6 +1,8 @@
 var strand;
 var strandX = 0;
 
+
+
 function preload() {
   strand = loadImage("images/backgrounds/strand.jpg");
 }
