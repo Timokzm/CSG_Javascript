@@ -1,5 +1,7 @@
 var kater,toren,piano;
 
+
+
 function preload() {
   kater = loadImage("images/brieck.jpg");
   toren = loadImage("images/toren.jpg");
