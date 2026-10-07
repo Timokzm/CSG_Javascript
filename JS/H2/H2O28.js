@@ -49,9 +49,15 @@ var jos = {
     this.y = constrain(this.y,0,canvas.height-raster.celGrootte);
   },
 
-  wordtGeraakt(vijand) {
-    return false;
+    wordtGeraakt(vijand) {
+    if (this.y == vijand.y ) {
+      return true;
+    }
+    else {
+      return false;
+    }
   },
+
 
   toon() {
     image(this.animatie[this.frameNummer],this.x,this.y,raster.celGrootte,raster.celGrootte);
@@ -62,7 +68,7 @@ var alice = {
   x: 700,
   y: 200,
   sprite: null,
-  stapGrootte: null,
+  stapGrootte: 1,
 
   beweeg() {
     this.x += floor(random(-1,2))*this.stapGrootte;
@@ -102,7 +108,9 @@ function draw() {
   raster.teken();
   jos.beweeg();
   jos.toon();
+  alice.beweeg();
   alice.toon();
+ 
 
   if (jos.wordtGeraakt(alice)) {
     noLoop();

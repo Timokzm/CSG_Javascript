@@ -23,7 +23,7 @@ function setup() {
   textFont("Georgia");
   textSize(18);
   noStroke();
-  frameRate(2);
+  frameRate(20);
   breedte = spriteSheet.width;
   hoogte = spriteSheet.height;
   sBr = breedte / aantalSpriteKolommen;
@@ -35,7 +35,7 @@ function setup() {
 function draw() {
   background('wheat');
   image(spriteSheet,x,y,br,ho,(frameCount % aantalSpriteKolommen)*sBr,rij*sHo,sBr,sHo);
-  image(spriteSheet,x + 175,y,115,115,0,0,460,460);
+  image(spriteSheet,x + 175,y,115,115,900,460,460,460);
 
   kolom = frameCount % aantalSpriteKolommen;
 
